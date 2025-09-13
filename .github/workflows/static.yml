@@ -9,17 +9,23 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PUBLIC_URL: /mp0        # needed so assets work at /mp0 on Pages
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: '20' }
-      - run: npm ci
+        with: { node-version: '18' }   # safer for older webpack configs
+      - run: npm ci || npm install
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
-        with: { path: dist }   # webpack outputs to dist
+        with: { path: dist }           # webpack output folder
   deploy:
     needs: build
     runs-on: ubuntu-latest
