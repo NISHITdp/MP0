@@ -1,28 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <title>MP 0</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MP0 — Profile Card</title>
+  <!-- CSS is in src/css/main.css -->
+  <link rel="stylesheet" href="./css/main.css" />
 </head>
-
 <body>
-  <div class="card">
-    <img src="assets/image.jpg" alt="Nishit Mistry" />
-    <h1>NISHIT MISTRY</h1>
-    <p>
-      I’m Nishit Mistry, an MSIM graduate student at UIUC focusing on web programming and data systems. 
-      I’m currently an R&D Data Science intern at Sherwin-Williams and recently served as a Graduate TA for IS 477. 
-      Previously, I worked at Larsen & Toubro Financial in digital servicing. Tech I use most: HTML/CSS/JS, Python, SQL, and Tableau.
-    </p>
-    <a href="https://www.linkedin.com/in/nishit-mistry-b801041a1/">Connect on LinkedIn</a>
-  </div>
-
-  <script src="bundle.js" type="text/javascript"></script>
+  <main class="page">
+    <article class="card" aria-label="Profile card">
+      <img class="avatar" src="./assets/image.jpg" alt="Nishit Mistry" />
+      <h1 class="name">NISHIT MISTRY</h1>
+      <p class="bio">
+        I’m Nishit Mistry, an MSIM graduate student at UIUC focusing on web programming and data systems.
+        I’m currently an R&D Data Science intern at Sherwin-Williams and recently served as a Graduate TA for IS 477.
+        Previously, I worked at Larsen & Toubro Financial in digital servicing. Tech I use most: HTML/CSS/JS, Python, SQL, and Tableau.
+      </p>
+      <a class="cta" href="https://www.linkedin.com/in/nishit-mistry-b801041a1/" target="_blank" rel="noopener noreferrer">
+        Connect on LinkedIn →
+      </a>
+    </article>
+  </main>
 </body>
-
-
 </html>
